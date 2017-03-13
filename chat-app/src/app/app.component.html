@@ -1,0 +1,26 @@
+<nav class="navbar navbar-inverse bg-primary">
+  <h1 class="navbar-brand">FirebaseChat</h1>
+</nav>
+
+<form (ngSubmit)="beginPostMessageProcess()" >
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
+  </div>
+  <div class="form-group">
+    <label for="text">Text</label>
+    <input type="text" class="form-control" id="text" [(ngModel)]="text" name="text" required>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+<div>Chatlog:</div>
+<ul>
+  <li class="text" *ngFor="let message of messages | async">
+    {{message.username}} - {{message.text}}
+  </li>
+</ul>
+<div class="errorMsg">{{errorMsg}}</div>
+<div>
+<h2>About</h2>
+<p>Website to play with Firebase, and Firebase rules. Rules in place: on submit, log time, and create a 500ms window for messages to get created, then lock out table for 2 seconds.</p>
