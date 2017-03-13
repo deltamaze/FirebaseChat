@@ -55,7 +55,7 @@ export class AppComponent {
     this.errorMsg = "";
   }
   private handleError(data: any){
-    this.errorMsg = "Opps, please try again, perhaps wait 2 seconds ^_^ Error=>"+data.message;
+    this.errorMsg = "Opps, please try again, perhaps wait 2 seconds. Error=>"+data.message;
   }
 
 }
