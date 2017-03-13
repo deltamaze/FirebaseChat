@@ -9,6 +9,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 import { AppComponent } from './app.component';
 import * as firebase from 'firebase';
 
+// Must export the config
 
   export const firebaseConfig = {
   apiKey: '<your-key>',
@@ -17,7 +18,6 @@ import * as firebase from 'firebase';
   storageBucket: '<your-storage-bucket>',
   messagingSenderId: '<your-messaging-sender-id>'
 };
-
 
 @NgModule({
   declarations: [

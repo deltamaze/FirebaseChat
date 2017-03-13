@@ -15,6 +15,7 @@ export class AppComponent {
   username: string = "";
   text: string = "";
   errorMsg: string="";
+  firebaseRulesGist: string = '<script src="https://gist.github.com/deltamaze/e171de9da04e8c9739ac272b5205aaa5.js"></script>';
 
 
   constructor(public af: AngularFire) {
